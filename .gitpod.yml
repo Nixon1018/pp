@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Get Flutter Packages
+    command: |
+      export PATH="/home/gitpod/flutter/bin:$PATH"
+      flutter pub get
+
+ports:
+  - port: 5000
+    onOpen: open-preview
